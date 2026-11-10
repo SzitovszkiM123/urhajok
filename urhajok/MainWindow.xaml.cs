@@ -14,11 +14,24 @@ namespace urhajok
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public class Urhajo
     {
-        public MainWindow()
+        public string Nev { get; set; }
+        public int Legenyseg { get; set; }
+        public int MaxHatotav { get; set; }
+        public int UzemenyagSzint { get; set; }
+        public string Gyarto { get; set; }
+        public string KuldetesStatusz { get; set; }
+        public int InditasEve { get; set; }
+        public Urhajo(string nev, int legenyseg, int maxHatotav, int uzemenyagSzint, string gyarto, string kuldetesStatusz, int inditasEve)
         {
-            InitializeComponent();
+            Nev = nev;
+            Legenyseg = legenyseg;
+            MaxHatotav = maxHatotav;
+            UzemenyagSzint = uzemenyagSzint;
+            Gyarto = gyarto;
+            KuldetesStatusz = kuldetesStatusz;
+            InditasEve = inditasEve;
         }
     }
 }
