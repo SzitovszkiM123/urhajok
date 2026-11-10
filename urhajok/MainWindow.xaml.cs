@@ -58,6 +58,18 @@ namespace urhajok
             dgrid.Items.Refresh();
         }
 
+        private void hanyurhajo(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                MessageBox.Show($"{urhajok.Count()} db űrhajó van");
+            }
+        }
+
     }
 }
 

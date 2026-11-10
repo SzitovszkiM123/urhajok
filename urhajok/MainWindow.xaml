@@ -14,6 +14,7 @@
         <StackPanel Orientation="Vertical" Grid.Column="0" Background="#FF14293A">
         <TextBlock Text="Űrhajó műveletek" Foreground="White" FontSize="24" FontWeight="Bold" Margin="5,5,5,15"/>
         <Button Content="Adatok betöltése" Margin="10,10,10,5" Padding="5" Click="betolt"/>
+            <Button Content="Hány űrhajó van?" Margin="10,10,10,5" Padding="5" Click="hanyurhajo"/>
         </StackPanel>
         <DataGrid x:Name="dgrid" Grid.Column="1" SelectionChanged="dgrid_SelectionChanged"/>
     </Grid>
