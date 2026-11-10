@@ -135,6 +135,19 @@ namespace urhajok
             }
         }
 
+        private void kereses(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                var talalatok = urhajok.Where(u => u.Nev.ToLower().Contains(tbKereses.Text.ToLower())).ToList();
+                dgrid.ItemsSource = talalatok;
+            }
+        }
+
     }
 }
 
