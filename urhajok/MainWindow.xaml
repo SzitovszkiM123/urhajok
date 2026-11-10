@@ -18,6 +18,7 @@
             <Button Content="Melyiknek a legnagyobb a hatótávja?" Margin="10,10,10,5" Padding="5" Click="legnagyobbhatotav"/>
             <Button Content="Kik voltak sikeres küldetésen?" Margin="10,10,10,5" Padding="5" Click="sikeres"/>
             <Button Content="Átlagos legénységszám" Margin="10,10,10,5" Padding="5" Click="atlag"/>
+            <Button Content="Gyártók szerinti csoportosítás" Margin="10,10,10,5" Padding="5" Click="gyartok"/>
         </StackPanel>
         <DataGrid x:Name="dgrid" Grid.Column="1" SelectionChanged="dgrid_SelectionChanged"/>
     </Grid>

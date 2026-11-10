@@ -109,6 +109,32 @@ namespace urhajok
             }
         }
 
+        private void gyartok(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                List<string> gyartok = new List<string>();
+                foreach (var u in urhajok)
+                {
+                    if (!gyartok.Contains(u.Gyarto))
+                    {
+                        gyartok.Add(u.Gyarto);
+                    }
+                }
+                var sorok = gyartok.Select(gy =>
+                {
+                    var nevek = urhajok.Where(u => u.Gyarto == gy).Select(u => u.Nev).ToList();
+                    return $"{gy} ({nevek.Count()} db): {string.Join(", ", nevek)}";
+                }).ToList();
+
+                MessageBox.Show(string.Join("\n", sorok));
+            }
+        }
+
     }
 }
 
