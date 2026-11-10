@@ -20,6 +20,8 @@
             <Button Content="Átlagos legénységszám" Margin="10,10,10,5" Padding="5" Click="atlag"/>
             <Button Content="Gyártók szerinti csoportosítás" Margin="10,10,10,5" Padding="5" Click="gyartok"/>
             <Button Content="Keresés név alapján" Margin="10,10,10,5" Padding="5" Click="kereses"/>
+            <TextBox x:Name="tbKereses" Margin="10,10,10,5" Padding="3"/>
+            <ProgressBar x:Name="pbar" Height="22" Margin="10,10,10,5"/>
         </StackPanel>
         <DataGrid x:Name="dgrid" Grid.Column="1" SelectionChanged="dgrid_SelectionChanged"/>
     </Grid>

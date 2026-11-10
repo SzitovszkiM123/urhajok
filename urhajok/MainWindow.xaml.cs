@@ -148,6 +148,16 @@ namespace urhajok
             }
         }
 
+        private void dgrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgrid.SelectedItem is Urhajo kivalasztott && urhajok.Any())
+            {
+                pbar.Minimum = 0;
+                pbar.Maximum = 100;
+                pbar.Value = kivalasztott.UzemenyagSzint;
+            }
+        }
+
     }
 }
 
