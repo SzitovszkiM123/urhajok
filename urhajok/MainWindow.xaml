@@ -12,6 +12,9 @@
             <ColumnDefinition Width="2.2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" Grid.Column="0" Background="#FF14293A">
+        <TextBlock Text="Űrhajó műveletek" Foreground="White" FontSize="24" FontWeight="Bold" Margin="5,5,5,15"/>
+        <Button Content="Adatok betöltése" Margin="10,10,10,5" Padding="5" Click="betolt"/>
         </StackPanel>
+        <DataGrid x:Name="dgrid" Grid.Column="1" SelectionChanged="dgrid_SelectionChanged"/>
     </Grid>
 </Window>
