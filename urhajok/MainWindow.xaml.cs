@@ -70,6 +70,19 @@ namespace urhajok
             }
         }
 
+        private void legnagyobbhatotav(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                var legnagyobb = urhajok.OrderByDescending(u => u.MaxHatotav).Take(1).ToList();
+                dgrid.ItemsSource = legnagyobb;
+            }
+        }
+
     }
 }
 
