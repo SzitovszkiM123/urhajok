@@ -83,6 +83,19 @@ namespace urhajok
             }
         }
 
+        private void sikeres(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                var sikeresek = urhajok.Where(u => u.KuldetesStatusz == "Sikeres").ToList();
+                dgrid.ItemsSource = sikeresek;
+            }
+        }
+
     }
 }
 
