@@ -96,6 +96,19 @@ namespace urhajok
             }
         }
 
+        private void atlag(object sender, RoutedEventArgs e)
+        {
+            if (!urhajok.Any())
+            {
+                MessageBox.Show("Nincs betöltve űrhajó lista!");
+            }
+            else
+            {
+                var atlag = urhajok.Average(u => u.Legenyseg);
+                MessageBox.Show($"Az űrhajók átlagos legénységszáma: {atlag}");
+            }
+        }
+
     }
 }
 
